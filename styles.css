@@ -1,0 +1,105 @@
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --border-radius: 0.8em;
+  --padding: 1.8em;
+}
+body {
+  font-family: "Overpass", serif;
+  background-color: var(--very-dark-blue);
+  color: white;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+.decorative-container {
+  display: grid;
+  place-items: center;
+  background-color: hsl(215, 9%, 27%);
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+}
+.rating-state-container,
+.thank-you-state-container {
+  max-width: 22.05em;
+  padding: var(--padding);
+  background-color: var(--dark-blue);
+  border-radius: var(--border-radius);
+}
+form{
+  display: grid;
+}
+fieldset {
+  margin-top: -1.5em;
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+legend {
+  color: var(--light-grey);
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"]:checked + label{
+  color: var(--dark-blue);
+  background-color: var(--white);
+}
+
+label{
+  display: grid;
+  place-items: center;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background-color: hsl(215, 9%, 27%);
+  color: var(--light-grey);
+}
+label:hover{
+  background-color: var(--orange);
+  color: var(--dark-blue);
+  cursor: pointer;
+}
+#submit-btn{
+  place-self: center;
+  height: 3.2em;
+  width: 95%;
+  margin-top: 1.0em;
+  background-color: var(--orange);
+  border: none;
+  border-radius: 2.0em;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+}
+#submit-btn:hover{
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.thank-you-state-container {
+  display: none;
+  max-width: 22.4em;
+  place-items: center;
+}
+.thank-you-state-container p:first-of-type{
+  background-color: hsl(215, 9%, 27%);
+  margin-top: 1.5em;
+  padding: 0.5em;
+  border-radius: 2.0em;
+  color: var(--orange);
+}
+strong{
+  font-size: 150%
+}
+.thank-you-state-container p:nth-of-type(3){
+  color: var(--light-grey);
+  margin-top: -0.2em;
+  text-align: center;
+}
+
